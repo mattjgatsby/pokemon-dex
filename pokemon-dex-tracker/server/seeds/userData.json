@@ -1,0 +1,14 @@
+[
+    {
+        "username": "Misty",
+        "email": "Misty@misty.com",
+        "password": "@waterisTheBest",
+        "pokemonCaught": []
+    },
+    {
+        "username": "mike",
+        "email": "mike@mike.com",
+        "password": "Pokemon2022",
+        "pokemonCaught": []
+    }
+]

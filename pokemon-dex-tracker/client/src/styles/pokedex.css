@@ -1,0 +1,114 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+h4 {
+ font-size: 10px;
+}
+
+h6 {
+ font-size: 10%;
+}
+
+/* nav background color */
+.nav {
+    background-color: #E9FD38 ;
+    border-bottom: 2px solid black;
+}
+
+/* banner background */
+.banner-bg {
+    background-image: url('../images/pokemon-banner.jpg');
+    padding-top: 15vh;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: top;
+    min-width: 100%;
+}
+
+/* tab-bg-black-border */
+.tab-bg-black {
+    max-width: 7vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+}
+/* tab-bg-white-border */
+.tab-bg-white {
+    max-width: 7vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+}
+/* pokemon logo colors */   
+.dashboard-bg {
+    background: rgb(0,58,112);
+    background: linear-gradient(180deg, rgba(0,58,112,1) 0%, rgba(61,125,202,1) 50%, rgba(255,203,5,1) 100%);
+    min-height: 80vh;
+    width: 100vw;
+}
+/* red - blue */
+.gen-one-bg {
+    background: rgb(193,30,30);
+    background: linear-gradient(90deg, rgba(193,30,30,1) 0%, #1b19bb 69%);
+    min-height: 100vh;
+    width: 100vw;
+}
+/* gold - silver */
+.gen-two-bg {
+    background: rgb(212,175,55);
+    background: linear-gradient(180deg, rgba(212,175,55,1) 0%, rgba(170,169,173,1) 100%);
+    min-height: 100vh;
+    width: 100vw;
+}
+/* ruby - sapphire */
+.gen-three-bg {
+    background: rgb(224,17,95);
+    background: linear-gradient(180deg, rgba(224,17,95,1) 0%, rgba(0,103,165,1) 100%);
+    min-height: 100vh;
+    width: 100vw;
+}
+/* diamond - pearl */
+.gen-four-bg {
+    background: rgb(185,242,255);
+    background: linear-gradient(180deg, rgba(185,242,255,1) 0%, rgba(234,224,200,1) 100%);
+    min-height: 100vh;
+    width: 100vw;
+}
+/* black - white */
+.gen-five-bg {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+    min-height: 100vh;
+    width: 100vw;
+}
+/* gen-6-9 still needed */
+.pokeball {
+    width: 5vw;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .nav-item {
+        padding: 0;
+    }
+    .tab-bg-black {
+        max-width: 8.33vw;
+    }
+    .tab-bg-white {
+        max-width: 8.33vw;
+    }
+}
