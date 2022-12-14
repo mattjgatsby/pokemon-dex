@@ -26,7 +26,6 @@ import Trainers from "./components/pages/Trainers";
 import "./styles/pokedex.css";
 import DexTabs from "./components/DexTabs";
 
-
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -42,10 +41,10 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-// const client = new ApolloClient({
-//   link: authLink.concat(httpLink),
-//   cache: new InMemoryCache(),
-// });
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   useEffect(() => {
@@ -53,17 +52,18 @@ function App() {
   }, []);
 
   const [isLogged, setLogginStatus] = useState("");
-  
+
   const getLocal = () => {
     const token = localStorage.getItem("id_token");
     setLogginStatus(token);
   };
 
   return (
-    // <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <Router>
         <DexTabs isLogged={isLogged} />
         <Routes>
+          <Route path="/" element={<Login />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/GenOne" element={<GenOne />} />
           <Route path="/GenTwo" element={<GenTwo />} />
@@ -79,7 +79,7 @@ function App() {
           <Route path="/sprites" element={<Trainers />} />
         </Routes>
       </Router>
-    // </ApolloProvider>
+    </ApolloProvider>
   );
 }
 
