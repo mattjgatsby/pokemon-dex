@@ -26,6 +26,7 @@ import Trainers from "./components/pages/Trainers";
 import "./styles/pokedex.css";
 import DexTabs from "./components/DexTabs";
 
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -52,7 +53,7 @@ function App() {
   }, []);
 
   const [isLogged, setLogginStatus] = useState("");
-
+  
   const getLocal = () => {
     const token = localStorage.getItem("id_token");
     setLogginStatus(token);
@@ -63,7 +64,7 @@ function App() {
       <Router>
         <DexTabs isLogged={isLogged} />
         <Routes>
-          <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/GenOne" element={<GenOne />} />
           <Route path="/GenTwo" element={<GenTwo />} />
