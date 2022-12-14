@@ -25,7 +25,6 @@ import Signup from "./components/pages/SignUp";
 import Trainers from "./components/pages/Trainers";
 import "./styles/pokedex.css";
 import DexTabs from "./components/DexTabs";
-import Auth from './utils/auth'
 
 
 const httpLink = createHttpLink({
@@ -58,9 +57,6 @@ function App() {
   const getLocal = () => {
     const token = localStorage.getItem("id_token");
     setLogginStatus(token);
-    // if(Auth.isTokenExpired(token)){
-    //   setLogginStatus(token)
-    // }
   };
 
   return (
